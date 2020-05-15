@@ -34,7 +34,8 @@
             <tbody id="product-owner">
             </tbody>
           </table>
-          
+        <hr>
+        <h1 class="pl-1">Upload Product</h1>    
           <form onsubmit="upload(event)">
             <p>Product Name: <input type="text" name="user"></p>
             <p>Product Description: <input type="text" name="information"></p>
@@ -357,8 +358,14 @@
         })
 
         function buyFunction(_id,_price){
+
             reloaded = false;
-            var rating = prompt("Enter a Rating level (from 0 to 5)", "0");
+            //var rating = prompt("Enter a Rating level (from 0 to 5)", "0");
+            var rating = parseInt(prompt("Enter a Rating level (from 0 to 5)", "0"), 10);
+            if ( rating == 0 | rating == 1 | rating == 2 | rating == 3 | rating == 4 | rating == 5  ){
+
+            alert('Your rating score is '+rating);
+
             myContract.buyProduct(_id,rating,
                 {
                     gas: 3000000,
@@ -377,7 +384,10 @@
                         console.log(error.message);
                     }
             });
-            
+          }else
+          {
+            alert('Your rating is invalid, please go back and try it again');
+          }
         }
 
         function upload(){
