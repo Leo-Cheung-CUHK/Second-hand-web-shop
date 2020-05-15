@@ -10,7 +10,7 @@ Second-hand web shopping using Smart Contract on Ethereum Test network.
     4. [MetaMask - ChromeExtension] to be virtual Wallet
 
  ### Deploy the transaction 
- 1. `git clone https://github.com/ToeiKanta/Smart-Contract-WebShop.git`
+ 1. `git clone git@github.com:Leo-Cheung-CUHK/Second-hand-web-shop.git`
  2. `cd Smart-Contract-WebShop`
  3. `cd truffle` then run `truffle init`, `truffle migrate --reset` to deploy the transaction to Ethereum network
 
